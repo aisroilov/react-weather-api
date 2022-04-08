@@ -1,1 +1,66 @@
 @import "~bootstrap/scss/bootstrap";
+
+.header {
+    margin: 50px 0 100px 0;
+    text-align: center;
+
+    h3 {
+        color: green;
+    }
+}
+.form-message-fail {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+
+    span {
+        color: rgb(101, 2, 2);
+        background-color: rgb(245, 94, 94);
+        padding: 10px;
+        font-weight: bold;
+        font-size: 20px;
+        border-radius: 5px;
+    }
+   
+}
+
+.form-message-success {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+
+    span {
+        color: rgb(14, 78, 2);
+        background-color: rgb(94, 245, 112);
+        padding: 10px;
+        font-weight: bold;
+        font-size: 20px;
+        border-radius: 5px;
+    }
+   
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 100%;
+    
+    
+
+    .form {
+        border: 1px solid rgb(192, 192, 192);
+        border-radius: 5px;
+        padding: 10px;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        width: 30%;
+    }
+
+    .btn-container {
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+
