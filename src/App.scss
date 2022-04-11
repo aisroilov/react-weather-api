@@ -1,11 +1,31 @@
 @import "~bootstrap/scss/bootstrap";
 
+body {   
+    background: url("assets/weather_bg.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.login-container {
+    color: aliceblue;
+    background: rgba(0, 0, 0, 0.5);    
+    text-align: center;
+    border: 1px solid #000;   
+    border-radius: 10px;
+    padding: 10px;
+    height: 530px;
+    margin-top: 50px;
+    
+}
+
 .header {
     margin: 50px 0 100px 0;
     text-align: center;
 
     h3 {
-        color: green;
+        color: #04ff04;
     }
 }
 .form-message-fail {
@@ -46,7 +66,7 @@
     display: flex;
     justify-content: center;
     align-content: center;
-    height: 100%;
+    
     
     
 
@@ -64,3 +84,63 @@
     }
 }
 
+.ml-5{
+    margin-left: 10px;
+}
+
+.cover {
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);    
+    min-height: 873px;
+}
+
+.weather {
+    color: white;
+    background: rgba(0, 0, 0, 0.5);    
+    text-align: center;
+    border: 1px solid #000;   
+    border-radius: 10px;
+    padding: 10px;
+    width: 30%;
+
+    .name {
+        text-transform: uppercase;
+    }
+
+    .country {
+        color: rgb(161, 161, 161);
+    }
+
+    .text {
+        margin-top: 30px;
+    }
+
+    .img {
+        height: 100px;
+
+        img {
+            height: 100%;
+        }
+    }
+
+    .temp {
+        font-size: 50px;
+    }
+
+}
+
+.search-container {
+    text-align: center;
+
+    
+    .search-input {
+        color: white;
+        background: rgba(0, 0, 0, 0.5);        
+        border: 1px solid #000;   
+        border-radius: 25px;
+        padding: 10px;
+        margin: 10px;
+        width: 20%;
+    }
+
+}

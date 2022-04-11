@@ -11,7 +11,6 @@ const LoginPage = ({ getUser }) => {
   const [isCorrect, setCorrect] = useState(false);
   const [showFailMessage, setShowFailMessage] = useState(false);
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
-  const [userName, setUserName] = useState("");
   let navigate = useNavigate();
 
   const getLogin = (login) => {
@@ -46,59 +45,58 @@ const LoginPage = ({ getUser }) => {
       <Container>
         <Row>
           <Col>
-            <div className="header">
-              <h2>Welcome to weather app!</h2>
-              <h3>Please login.</h3>
-            </div>
-            {showFailMessage && !isCorrect ? (
-              <div className="form-message-fail">
-                <span>Login or Password not correct!</span>
+            <div className="login-container">
+              <div className="header">
+                <h2>Welcome to weather app!</h2>
+                <h3>Please login.</h3>
               </div>
-            ) : (
-              ""
-            )}
+              {showFailMessage && !isCorrect ? (
+                <div className="form-message-fail">
+                  <span>Login or Password not correct!</span>
+                </div>
+              ) : (
+                ""
+              )}
 
-            {showSuccessMessage && isCorrect ? (
-              <div className="form-message-success">
-                <span>Authentification succesfull!</span>
-              </div>
-            ) : (
-              ""
-            )}
-          </Col>
-        </Row>
-        <Row>
-          <Col>
-            <div className="form-container">
-              <div className="form">
-                <div className="mb-3">
-                  <input
-                    className="form-control"
-                    type="text"
-                    placeholder="Login"
-                    onChange={(e) => {
-                      getLogin(e.target.value);
-                    }}
-                  />
+              {showSuccessMessage && isCorrect ? (
+                <div className="form-message-success">
+                  <span>Authentification succesfull!</span>
                 </div>
-                <div className="mb-3">
-                  <input
-                    className="form-control"
-                    type="password"
-                    placeholder="Password"
-                    onChange={(e) => {
-                      getPassword(e.target.value);
-                    }}
-                  />
-                </div>
-                <div className="btn-container">
-                  <Button
-                    type="submit"
-                    className="btn btn-primary"
-                    onClick={authentication}
-                  >
-                    Login
-                  </Button>
+              ) : (
+                ""
+              )}
+
+              <div className="form-container">
+                <div className="form">
+                  <div className="mb-3">
+                    <input
+                      className="form-control"
+                      type="text"
+                      placeholder="Login"
+                      onChange={(e) => {
+                        getLogin(e.target.value);
+                      }}
+                    />
+                  </div>
+                  <div className="mb-3">
+                    <input
+                      className="form-control"
+                      type="password"
+                      placeholder="Password"
+                      onChange={(e) => {
+                        getPassword(e.target.value);
+                      }}
+                    />
+                  </div>
+                  <div className="btn-container">
+                    <Button
+                      type="submit"
+                      className="btn btn-primary"
+                      onClick={authentication}
+                    >
+                      Login
+                    </Button>
+                  </div>
                 </div>
               </div>
             </div>
